@@ -1,3 +1,30 @@
-body{
-    background-color: rebeccapurple;
+
+:root{
+    --primary-color: #0000ff;
+    --secondary-color: #ff0000;
 }
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header > nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+nav button{
+    margin: 15px;
+    background-color: var(--secondary-color);
+    height: 3rem;
+    width: 5rem;
+    border-radius: 15px;
+}
+
