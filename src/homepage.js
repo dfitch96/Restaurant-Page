@@ -1,5 +1,5 @@
 import backgroundImage from "./images/george-bakos-83HwuZirc-c-unsplash.jpg"
-import {weekDays, hours} from "./hours.js";
+import {weekDays, hours, specials} from "./info.js";
 
 export const HomePageLoader = function(){
 
@@ -65,8 +65,23 @@ export const HomePageLoader = function(){
 
     }
 
+    function appendSpecials(){
+        const header = document.createElement("h1");
+        header.textContent = "Sunday Specials";
+        homePageDiv.appendChild(header);
+
+        for(let i = 0; i < specials.length; i++){
+            const specialsDiv = document.createElement("h3");
+            specialsDiv.textContent = specials[i];
+            homePageDiv.appendChild(specialsDiv);
+        }
+
+    }
+
     setAttributes();
+    appendSpecials();
     appendHours();
+    
 
     return {
         loadHomePage,
@@ -76,58 +91,3 @@ export const HomePageLoader = function(){
 
 
 
-
-
-
-
-
-
-
-
-
-/* 
-<div id="content-body">
-<div id="home-page">
-    
-    <h1>NFL Sunday Specials</h1>
-    <h3>$2 Domestic Beers</h3>
-    <h3>$4 Draft Beers</h3>
-    <h3>$0.50 Buffalo Wings</h3>
-    <h3>$15 Large Pizza</h3>
-    <h3>$7 Beef on Weck</h3>
-    <div id="business-hours">
-        <h1>Business Hours</h1>
-        <div class="business-hour">
-            <div>Monday</div>
-            <div>2pm-1am</div>
-        </div>
-        <div class="business-hour">
-            <div>Tuesday</div>
-            <div>2pm-1am</div>
-        </div>
-        <div class="business-hour">
-            <div>Wednesday</div>
-            <div>2pm-1am</div>
-        </div>
-        <div class="business-hour">
-            <div>Thursday</div>
-            <div>2pm-1am</div>
-        </div>
-        <div class="business-hour">
-            <div>Friday</div>
-            <div>2pm-4am</div>
-        </div>
-        <div class="business-hour">
-            <div>Saturday</div>
-            <div>11am-4am</div>
-        </div>
-        <div class="business-hour">
-            <div>Sunday</div>
-            <div>11am-1am</div>
-        </div>
-    </div>
-    
-</div>
-
-</div> 
-*/

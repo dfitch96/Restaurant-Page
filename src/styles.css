@@ -82,6 +82,7 @@ nav button{
     flex-direction: column;
     padding: 5px;
     border: 2px solid white;
+    margin: 20px;
 
 }
 
