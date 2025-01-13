@@ -12,12 +12,20 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+header{
+    width: 100vw;
+}
+
+header img{
+    height: 5rem;
+    width: auto;
+}
 
 header > nav{
     
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
     padding: 20px;
@@ -66,5 +74,20 @@ nav button{
     flex-direction: column;
     align-items: center;
     color: white;
+}
+
+
+#business-hours{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+
+.business-hour{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
 }
 
